@@ -1,0 +1,5 @@
+#vehicle-identification-number .inside .rwmb-meta-box{
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+}
