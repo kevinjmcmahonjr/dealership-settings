@@ -36,6 +36,15 @@ function motent_load_dealership_admin_style($hook) {
 }
 add_action( 'admin_enqueue_scripts', 'motent_load_dealership_admin_style' );
 
+function motent_vehicle_post_admin_style($hook) {
+        // Load only on admin.php?page=dealership-settings
+        if($hook != 'vehicles') {
+                return;
+        }
+        wp_enqueue_style( 'custom_wp_admin_css', plugins_url('/css/vehicle-post-admin-style.css', __FILE__) );
+}
+add_action( 'admin_enqueue_scripts', 'motent_vehicle_post_admin_style' );
+
 function motent_change_title_text( $title ){
      $screen = get_current_screen();
      if  ( 'vehicles' == $screen->post_type ) {
