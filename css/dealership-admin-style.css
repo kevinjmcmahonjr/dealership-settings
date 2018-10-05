@@ -1,6 +1,9 @@
 #dealership .rwmb-meta-box > .rwmb-group-wrapper > .rwmb-label{
     clear: both;
     width: 100%;
+}
+
+#dealership .rwmb-meta-box > .rwmb-group-wrapper > .rwmb-label > label{
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 15px;
