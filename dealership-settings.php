@@ -23,4 +23,10 @@ function motent_dealership_options_page( $settings_pages ) {
     );
     return $settings_pages;
 }
+
+add_action( 'admin_enqueue_scripts', 'motent_load_dealership_admin_style' );
+function motent_load_dealership_admin_style(){
+	wp_register_style ('dealership_admin_css', get_template_directory_uri() . '/css/dealership-admin-style.css' );
+	wp_enqueue_style ('dealership_admin_css', get_template_directory_uri() . '/css/dealershipt-admin-style.css' );
+}
 ?>
