@@ -20,6 +20,7 @@ function motent_dealership_options_page( $settings_pages ) {
         'id'          => 'dealership-settings',
         'option_name' => 'dealership_settings',
         'menu_title'  => 'Dealership Details',
+	'style' => 'no-boxes',
 	'position'    => '22'
     );
     return $settings_pages;
