@@ -5,3 +5,7 @@
     line-height: 38px;
     font-weight: bold;
 }
+
+h1{
+    color: red !important;
+}
