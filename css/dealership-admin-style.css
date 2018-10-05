@@ -13,6 +13,6 @@
     box-shadow: 2px 2px 8px -3px;
 }
 
-h1{
-    color: red !important;
+label{
+    cursor: default !important;
 }
