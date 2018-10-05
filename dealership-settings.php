@@ -28,9 +28,9 @@ function motent_dealership_options_page( $settings_pages ) {
 
 function motent_load_dealership_admin_style($hook) {
         // Load only on admin.php?page=dealership-settings
-        //if($hook != 'admin.php?page=dealership-settings') {
-        //        return;
-        //}
+        if($hook != 'toplevel_page_dealership-settings') {
+                return;
+        }
         wp_enqueue_style( 'custom_wp_admin_css', plugins_url('/css/dealership-admin-style.css', __FILE__) );
 }
 add_action( 'admin_enqueue_scripts', 'motent_load_dealership_admin_style' );
