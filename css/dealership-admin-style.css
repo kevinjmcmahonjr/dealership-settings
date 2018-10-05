@@ -18,3 +18,7 @@
 label{
     cursor: default !important;
 }
+
+#dealership .rwmb-label ~ .rwmb-input{
+    width: 100% !important;
+}
