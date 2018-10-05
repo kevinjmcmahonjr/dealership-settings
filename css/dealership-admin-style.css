@@ -23,11 +23,13 @@ label{
     width: 100% !important;
 }
 
+#dealership .locations > .rwmb-label,
 #dealership .employees > .rwmb-label{
     margin-bottom: 15px;
     font-size: 1.2em;
 }
 
+#dealership .locations .rwmb-field
 #dealership .employees .rwmb-field{
     padding: 0 0 15px 0;
 }
