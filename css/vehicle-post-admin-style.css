@@ -1,3 +1,7 @@
+h1{
+    color: red;
+}
+
 #vehicle-identification-number .inside .rwmb-meta-box{
     display: flex;
     justify-content: space-between;
