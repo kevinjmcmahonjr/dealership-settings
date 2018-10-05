@@ -46,6 +46,7 @@ function motent_vehicle_post_admin_style($hook) {
 add_action( 'admin_enqueue_scripts', 'motent_vehicle_post_admin_style' );
 
 function motent_change_title_text( $title ){
+	wp_die($hook);
      $screen = get_current_screen();
      if  ( 'vehicles' == $screen->post_type ) {
           $title = 'Enter Vehicle Listing Title | Leave Empty To Automatically Generate Title From Information Entered Below';
