@@ -38,7 +38,7 @@ add_action( 'admin_enqueue_scripts', 'motent_load_dealership_admin_style' );
 
 function motent_change_title_text( $title ){
      $screen = get_current_screen();
-     if  ( 'vehicle' == $screen->post_type ) {
+     if  ( 'vehicles' == $screen->post_type ) {
           $title = 'Enter Vehicle Name | Leave Empty To Automatically Generate Title From Information Entered Below';
      }
      return $title;
