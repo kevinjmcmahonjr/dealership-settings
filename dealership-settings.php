@@ -25,9 +25,13 @@ function motent_dealership_options_page( $settings_pages ) {
     return $settings_pages;
 }
 
-add_action( 'admin_enqueue_scripts', 'motent_load_dealership_admin_style' );
-function motent_load_dealership_admin_style(){
-	wp_register_style ('dealership_admin_css', get_template_directory_uri() . '/css/dealership-admin-style.css' );
-	wp_enqueue_style ('dealership_admin_css', get_template_directory_uri() . '/css/dealershipt-admin-style.css' );
+function motent_load_dealership_admin_style($hook) {
+        // Load only on admin.php?page=dealership-settings
+        if($hook != 'admin.php?page=dealership-settings') {
+                return;
+        }
+        wp_enqueue_style( 'custom_wp_admin_css', plugins_url('/css/dealership-admin-style.css', __FILE__) );
 }
+add_action( 'admin_enqueue_scripts', 'motent_load_dealership_admin_style' );
+
 ?>
