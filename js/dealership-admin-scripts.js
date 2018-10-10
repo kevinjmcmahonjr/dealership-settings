@@ -23,7 +23,7 @@ function runVinDecoder(){
     var vinDecodeButton = document.getElementById('vin-decode-button');
     var vinInputField = document.getElementById('vin-input-field');
     var vinNumber = vinInputField.value;
-    vinDecodeButton().addEventListener('click', function(){
+    vinDecodeButton.addEventListener('click', function(){
         if (vinNumber.length == 17){
             vinDecodeMakeRequest(vinNumber);
         }
