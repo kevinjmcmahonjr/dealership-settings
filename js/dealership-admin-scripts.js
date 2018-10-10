@@ -28,6 +28,8 @@ function runVinDecoder(){
             vinDecodeMakeRequest(vinNumber);
         }
         else{
+            console.log(vinNumber.length);
+            console.log(vinNumber);
             alert('Check the length of the VIN, must be 17 characters long.');
         }
     });
