@@ -23,7 +23,7 @@ function vinDecodeMakeRequest(vinNumber){
 function runVinDecoder(){
     var vinInputField = document.getElementById('vin-input-field');
     var vinNumber = vinInputField.value;
-    console.log('before condition ' + 'VIN: ' vinNumber + 'length: ' + vinNumber.length);
+    console.log("before condition " + "VIN: " vinNumber + "length: " + vinNumber.length);
     
     if (vinNumber.length == 17){
         console.log('true ' + 'VIN: ' vinNumber + 'length: ' + vinNumber.length);
