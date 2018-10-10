@@ -9,27 +9,28 @@ function vinDecodeMakeRequest(vinNumber){
     var vinDecodeBaseURL = 'https://vpic.nhtsa.dot.gov/api/vehicles/decodevin/';
     var vinDecodeResponseFormat = '?format=json';
     var vinDecodeCallback = '&jsoncallback=processVinDecodeResponse';
-    var vinDecodeURL = vinDecodeBaseURL + vinNumber +vinDecodeResponseFormat + vinDecodeCallback;
+    var vinDecodeURL = vinDecodeBaseURL + vinNumber + vinDecodeResponseFormat + vinDecodeCallback;
+    console.log(vinDecodeURL);
     function addScriptVinCall(vinDecodeURL) {
         var script = document.createElement('script');
         script.type= "text/javascript";
         script.src = vinDecodeURL;
         document.getElementsByTagName('head')[0].appendChild(script);
     }
-    addScriptVinCall();
+    //addScriptVinCall();
 }
 
 function runVinDecoder(){
     var vinDecodeButton = document.getElementById('vin-decode-button');
     var vinInputField = document.getElementById('vin-input-field');
     var vinNumber = vinInputField.value;
+    console.log(vinInputField);
+    console.log(vinNumber);
     vinDecodeButton.addEventListener('click', function(){
         if (vinNumber.length == 17){
             vinDecodeMakeRequest(vinNumber);
         }
         else{
-            console.log(vinNumber.length);
-            console.log(vinNumber);
             alert('Check the length of the VIN, must be 17 characters long.');
         }
     });
