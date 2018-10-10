@@ -21,19 +21,23 @@ function vinDecodeMakeRequest(vinNumber){
 }
 
 function runVinDecoder(){
-    var vinDecodeButton = document.getElementById('vin-decode-button');
     var vinInputField = document.getElementById('vin-input-field');
     var vinNumber = vinInputField.value;
-    console.log(vinInputField);
-    console.log(vinNumber);
-    vinDecodeButton.addEventListener('click', function(){
-        if (vinNumber.length == 17){
-            vinDecodeMakeRequest(vinNumber);
-        }
-        else{
-            alert('Check the length of the VIN, must be 17 characters long.');
-        }
-    });
+    console.log('before condition ' + 'VIN: 'vinNumber' + 'length: ' + vinNumber.length);
+    
+    if (vinNumber.length == 17){
+        console.log('true ' + 'VIN: 'vinNumber' + 'length: ' + vinNumber.length);
+        vinDecodeMakeRequest(vinNumber);
+    }
+    else{
+        console.log('false ' + 'VIN: 'vinNumber' + 'length: ' + vinNumber.length);
+        alert('Check the length of the VIN, must be 17 characters long.');
+    }
+}
+
+function vinDecodeButtonClick(){
+    var vinDecodeButton = document.getElementById('vin-decode-button');
+    vinDecodeButton.addEventListener('click', runVinDecoder);
 }
 
 function processVinDecodeResponse(obj){
@@ -42,5 +46,5 @@ function processVinDecodeResponse(obj){
 
 document.addEventListener('DOMContentLoaded', () => {
     setAllInputCleaves();
-    runVinDecoder();
+    vinDecodeButtonClick();
 });
