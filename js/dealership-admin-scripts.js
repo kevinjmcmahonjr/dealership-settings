@@ -30,7 +30,7 @@ function runVinDecoder(){
     if (vinNumber.length == 17){
         console.log('true');
         console.log(vinNumber);
-        console.logt(vinNumber.length);
+        console.log(vinNumber.length);
         vinDecodeMakeRequest(vinNumber);
     }
     else{
