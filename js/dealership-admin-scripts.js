@@ -17,7 +17,7 @@ function vinDecodeMakeRequest(vinNumber){
         script.src = vinDecodeURL;
         document.body.appendChild(script);
     }
-    addScriptVinCall();
+    addScriptVinCall(vinDecodeURL);
 }
 
 function runVinDecoder(){
