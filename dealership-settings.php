@@ -43,6 +43,7 @@ function motent_vehicle_post_admin_style() {
         }
         wp_enqueue_style( 'custom_wp_admin_css', plugins_url('/css/vehicle-post-admin-style.css', __FILE__) );
 	wp_enqueue_script( 'cleave_js', plugins_url('/js/cleave.min.js', __FILE__) );
+	wp_enqueue_script( 'dealership_admin_scripts', plugins_url('/js/dealership-admin-scripts.js', __FILE__), array(cleave_js) );
 }
 add_action( 'admin_enqueue_scripts', 'motent_vehicle_post_admin_style' );
 
