@@ -23,14 +23,20 @@ function vinDecodeMakeRequest(vinNumber){
 function runVinDecoder(){
     var vinInputField = document.getElementById('vin-input-field');
     var vinNumber = vinInputField.value;
-    console.log("before condition VIN:" vinNumber + "length:" );
+    console.log('before');
+    console.log(vinNumber);
+    console.log(vinNumber.length);
     
     if (vinNumber.length == 17){
-        console.log( "true VIN:" vinNumber + "length:" + vinNumber.length );
+        console.log('true');
+        console.log(vinNumber);
+        console.logt(vinNumber.length);
         vinDecodeMakeRequest(vinNumber);
     }
     else{
-        console.log( "false VIN:" vinNumber + "length:" + vinNumber.length );
+        console.log('false');
+        console.log(vinNumber);
+        console.log(vinNumber.length);
         alert('Check the length of the VIN, must be 17 characters long.');
     }
 }
