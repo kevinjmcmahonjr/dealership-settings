@@ -15,7 +15,7 @@ function vinDecodeMakeRequest(vinNumber){
         var script = document.createElement('script');
         script.type= "text/javascript";
         script.src = vinDecodeURL;
-        document.getElementsByTagName('head')[0].appendChild(script);
+        document.body.appendChild(script);
     }
     addScriptVinCall();
 }
@@ -47,6 +47,7 @@ function vinDecodeButtonClick(){
 }
 
 function processVinDecodeResponse(obj){
+    alert('success');
     console.log(obj);
 }
 
