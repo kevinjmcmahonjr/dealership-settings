@@ -7,7 +7,7 @@ function setAllInputCleaves(){
 
 function vinDecodeMakeRequest(vinNumber){
     var vinDecodeBaseURL = 'https://vpic.nhtsa.dot.gov/api/vehicles/decodevin/';
-    var vinDecodeResponseFormat = '?format=json';
+    var vinDecodeResponseFormat = '?format=jsonp';
     var vinDecodeCallback = '&callback=processVinDecodeResponse';
     var vinDecodeURL = vinDecodeBaseURL + vinNumber + vinDecodeResponseFormat + vinDecodeCallback;
     console.log(vinDecodeURL);
